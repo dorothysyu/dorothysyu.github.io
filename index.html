@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS cheat sheet</title>
+    <!-- Link is how this html file knows to refer to another file.
+    rel is telling us what kind of relationship it has to that file; in this case, this file is a stylesheet and that this is gonna be a css-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Difference between class and id:
+            as afar as the browser goes in terms of enforcing rules, there's no difference when it coems ot html and css
+            but you wanna think of IDs as IDs that aren't gonna be put anywhere else.
+            ex: when you hav a main nav bar, you wanna give that an id of main nav bar because you're not gonna be using that on another element
+            but if you're gonna be using it as class box 1 where you're gonna be giving it a border and background, you may wanna use it as a class.
+            bootstrap doesn't use IDs, only classes-->
+        <div class="box-1">
+            <h1> Hello World</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt harum voluptatem dolores ea doloremque, neque dolor tenetur praesentium, atque fugiat, ratione quasi! Illum neque nobis a dolorum eligendi beatae eius!</p>
+        </div>
+
+        <div class="box-2">
+            <h1> I'm Dorothy Yu. </h1>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sit in nesciunt harum dolor? Voluptatem, molestiae repellat. Officia rerum, tempora, voluptatem consequuntur eum fuga voluptatibus sequi asperiores error reiciendis eos non voluptates, architecto corporis animi repudiandae velit? Nulla earum fugit, rem a fuga non nihil, voluptatum at, rerum est soluta quaerat sit officiis delectus inventore provident ipsa aspernatur voluptatem saepe obcaecati impedit necessitatibus corrupti consequatur? Debitis odio, quae minima nihil in optio iste nostrum quia quod illo repellat facere omnis eos vel alias dicta quisquam reprehenderit incidunt illum perspiciatis provident libero! Accusamus laboriosam corporis sint culpa minima sequi deserunt aspernatur?</p>
+        </div>
+
+        <div class="categories">
+            <h2> Categories</h2>
+                <ul>
+                    <li><a href="#">Category 1</a> </li>
+                    <li><a href="#">Category 2</a> </li>
+                    <li><a href="#">Category 3</a> </li>
+                    <li><a href="#">Category 4</a> </li>
+                </ul>
+        </div>
+
+        <form class="my-form">
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" name="name">
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="text" name="email">
+            </div>
+            <div class="form-group">
+                <label>Message</label>
+                <textarea name="message"></textarea>
+            </div>
+            <input class="button" type="submit" value="Submit" name="">
+        </form>
+        <!-- this class:"block" is floated in the css. because of this, 
+        we add a tag with a clearfix so that it doesn't mess up the layout we put under it. -->
+        <div class="block">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, iure. Eaque quo, velit aperiam accusantium, illum ullam distinctio odio doloremque corrupti sint natus cupiditate quasi ad amet, voluptatibus harum modi??</p>
+        </div>
+        <div class="block">
+            <h3>Heading</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, cupiditate voluptate. Ipsa delectus porro non, ipsum eos sed incidunt! Quo nemo inventore et atque error fuga expedita sint ipsum. Exercitationem.</p>
+        </div>
+        <div class="block">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, consectetur culpa eligendi accusamus deleniti totam dolor! Soluta labore accusantium voluptatem, unde perferendis vero incidunt eaque sequi, quibusdam, alias sapiente praesentium!</p>
+        </div>
+        
+        <!-- Main area in the sidebar-->
+        <!-- when you float stuff oure gonna want clear it bc ur next markup is gonna be messed up-->
+        <!-- css styling for this div went up top bc it's kind of a global class-->
+        <div class="clr"></div>
+
+        <div id="main-block">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eum nobis aspernatur porro optio cupiditate, ipsum sed, officia deleniti cum quisquam! Nobis dolorem modi consequatur explicabo, et aliquam facere libero.</p>
+        </div>
+        <div id="sidebar">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, quasi.</p>
+        </div>
+
+        <div class="clr"></div>
+
+        <div class="p-box">
+            <h1> Hello </h1>
+            <h2>Goodbye</h2>
+        </div>
+
+        <!-- We can use pseudoclasses to target certain things -->
+        <ul class="my-list">
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+        </ul>
+    </div> <!-- Container ends here-->
+
+    <!-- THis has two classes-->
+    <a class="fix-me button" href="">Helloooo</a>
+
+
+    <div style=margin-top:500px;></div>
+</body>
+</head>

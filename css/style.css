@@ -1,0 +1,262 @@
+/*CSS selectors
+a { background-color: yellow; }
+a - selector. in this case, "a" is a link
+{} -declaration start and end
+background-color:yellow - a key value pair
+background color - property/key. MANY properties in css
+: property-value separator
+always wanna end it with a semicolon
+*/
+/*Changes the body itself, which wraps around everything*/
+
+/*you could zero out the margin and padding for everything on the page asterisk is saying every element, every style. this is called a reset. you may want to add a reset if you want no confusion whether anything has padding
+*{
+    margin:0;
+    padding:0;
+}
+*/
+
+body{
+    background-color:#678674;
+    color:#fffaf0; /* color of the text*/
+    /*web-safe font: you don't have to download any fonts. 
+    if you wanna use specialty font, from google fonts, you'd have to bring that in like stylesheet and apply it*/
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:18px;
+    font-weight:normal;
+
+    /*shortcut:
+    font: normal 18px 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    */
+    /*em is a unit in CSS, it's usually for more responsive-type websites. You could just make it pixels as well. yu'll usually see "m" for line heights*/
+    line-height:1.6em;
+    margin:0; /*will get rid of margins all around except for the top bc headings have margins by default*/
+}
+
+a {
+    text-decoration:none; /*gets rid of underline*/
+    color:#ffa8a8;
+}
+
+a:hover{
+    color:red;
+}
+
+a:active{ /*when you click on it, it flashes*/
+    color:green;
+}
+
+a:visited{
+    color:#ddd9d2;
+}
+
+/*would like to push everything in from the edges. will usually see in website you're gonna see it pushed in, stuff is not gonna go all the way to the edges. so we can create a class - container
+common in bootstrap*/
+.container{
+    width: 960px; /*making it pixels makes it not responsive*/
+    width:90%; /*so instead let's make it percentage of the screen*/
+    margin:auto; /*margin will set the margins on all sides*/
+   
+}
+
+.button {
+    background-color:#efb07b;
+    border-color:#c48f64;
+    border-radius:25px;
+    border-left:20px;
+    border-bottom:20px;
+    padding:10px;
+    color:white;
+}
+
+.button:hover{
+    background:brown;
+    color:white;
+}
+ /*padding vs border - what's the difference?
+    BOTH refer to space around an element
+    refer to box element - padding is space INSIDE border, margin is space OUTSIDE border
+    when we're applying padding and margin, there's diff ways to do it-long way and short way;
+
+    long way
+p{
+    margin-top:5px;
+    margin-bottom:5px;
+    margin-right:10px;
+    margin-left:10px;
+}
+    clockwise starting from top: top, right, bottom, left
+p{
+    margin: 5px 10px 5px 10px;
+}
+    if bottom and top are the same, and right and left are the same, only have to specify top and right.
+p{
+    margin: 5px 10px;
+}
+*/
+
+/*this will clear any floats above it*/
+.clr{
+    clear:both;
+}
+
+
+/* to target a class, you use a "." */
+.box-1{
+    background-color:#ff7f50;
+    color:white;
+    /*size, color, type/style*/
+    border:3px #ffb7a4 solid;
+    border-left-width:10px;
+    border-top-style:double;
+    padding:10px; /*h1 by default has some padding.*/
+    margin-top:3%; /*moves entire thing down bc it adds space around it.*/
+}
+
+/*i wanna style any h1 within the box-1 class*/
+.box-1 h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:800;
+    font-style:italic;
+    text-decoration: underline;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    word-spacing:0.5em;
+}
+
+.box-2 {
+    border:3px dotted #ccc;
+    padding:20px;
+    margin:20px 0;
+}
+
+/*remember that we made the categories is the div that surrounds this, not the list itself. like travis said, there's a million different ways to do CSS. you could've put the name in the ul tag instead of the div tag that surrounds it, it's just up to you*/
+.categories {
+    border:1px #ccc solid;
+    padding:10px;
+    border-radius:15px; /*this gives it rounded corner*/
+}
+
+.categories h2{
+    text-align:center;
+}
+
+.categories ul{ /*ul by default has padding */
+    padding:20px; /*zeroing it out*/
+    list-style:square;
+}
+
+.categories li {
+    padding-bottom:2px;
+    border-bottom:dotted 1px #333;
+    list-style-image: url("../images/moon.png") ;
+}
+
+.my-form{
+    padding:20px;
+
+}
+
+.my-form .form-group{
+    padding-bottom:15px;
+}
+
+.my-form label{
+    display:block; /*i want these label and input to be on separate lines without ahving to put line breaks in. block level elements get put in a new line and it goes across entire line*/
+}
+
+.my-form input[type="text"], .my-form textarea{
+    padding:8px;
+    width:100%; /*100% of its container*/
+}
+
+.block{
+    float:left;
+    width:30%;
+    margin:1%;
+    border:1px solid #ccc;
+    padding:10px;
+    box-sizing:border-box; /*makes it so that it takes the padding and porder and adds it to the width, so that it doesn't mess up the layout by making it too wide*/
+    /*flex box takes care of the layout very nicely and can do much more*/
+}
+
+/*This is an ID, so we're not gonna be using"." which is for class,
+but we're using "#" which is for ids*/
+#main-block{
+    float:left;
+    width:70%;
+    padding:15px;
+    box-sizing:border-box;
+}
+
+#sidebar{
+    float:right;
+    width:30%;
+    background-color:#a66157;
+    color:#fffaf0;
+    padding:15px;
+    box-sizing:border-box;
+
+}
+/*
+.p-box{
+    width:800px;
+    height:500px;
+    border:1px solid #ffa8a8;
+    margin-top:30px;
+}
+
+ This would position the Hello (h1) all the way up top, but 40px down.
+since it doesn't have a parent element that is positioned relative, it's just gonna use the entire 
+html document as its container.
+
+.p-box h1{
+    position:absolute;
+    top:40px;
+}
+*/
+
+/*If we want .pbox h1 to be pushed to the top 40px down from the top of pbox instead
+of the whole html document, we need to set the p-box to position relative.*/
+.p-box{
+    width:800px;
+    height:500px;
+    border:1px solid #ffa8a8;
+    margin-top:30px;
+    position:relative;
+    background-image: url("../images/Kawase\ Hasui\ —\ Lake\ Kamo\ under\ Moonlight\ in\ Sado\ Island.jpg");
+    background-repeat:no-repeat;
+    background-position:100px 200px;
+    background-position:center center; /*u can do center left center top u can even use percentages*/
+    
+}
+.p-box h1{
+    position:absolute;
+    top:100px;
+    left:50px;
+}
+
+/*good for social media links where u want the user to always see it, 
+sometimes you'll see this with navbars*/
+.fix-me{
+    position:fixed;
+    top:400px;
+}
+
+/*We can use pseudoclasses to target certain things*/
+.my-list li:first-child{
+    background:#ffa8a8;
+}
+
+.my-list li:last-child{
+    background:#c48f64;
+}
+
+.my-list li:nth-child(4){
+    background:#333;
+}
+
+/* VERY USEFUL FOR WHEN THE LIST IS AUTOMATICALLY GENERATED AND YOU CAN'T TARGET A LIST ITEM*/
+.my-list li:nth-child(odd){
+    background:#ffa8a8;
+}
